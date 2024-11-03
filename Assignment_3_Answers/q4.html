@@ -1,0 +1,33 @@
+<!-- Write a jQuery program with two buttons: one button labeled 'Fetch Text' to retrieve 
+and display the text content of a <p> element using an alert, and another button labeled 
+'Fetch HTML' to retrieve and display the HTML content of a <div> element using an 
+alert.  -->
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                const pText= $("#p1").text();
+                const dText= $("#d1").text()
+                $("#b1").click(function(){
+                    alert(pText);
+                })
+                $("#b2").click(function(){
+                    alert(dText);
+                })
+            })
+
+        </script> 
+        
+
+    </head>
+    <body>
+        <p id="p1">P Text!</p>
+        <div id="d1">Div Text!</div>
+        <button id="b1">Fetch Text</button>
+        <button id="b2">Fetch HTML</button>
+
+
+    </body>
+</html>

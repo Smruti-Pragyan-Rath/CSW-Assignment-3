@@ -1,0 +1,41 @@
+
+
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".div").click(function(){
+                    $(this).text("Clicked!");
+                });
+                $(".div").dblclick(function(){
+                    $(".body").css('background-color', 'Orange');
+                });
+                $(".div").mouseenter(function(){
+                    $(".div").css('border', '5px, solid, green');
+                });
+                $(".div").mouseleave(function(){
+                    $(".div").css('border', '5px, solid, black');
+                });
+               
+            });
+
+        
+        </script>
+        <style>
+            .div{
+                height: 50px;
+                width: 50px;
+                background-color: lightblue;
+                border: 5px solid black;
+                text-align: center;
+            }
+        </style>
+
+    </head>
+   <body class="body">
+    <div class="div"> DIV </div>
+
+   </body>
+</html>

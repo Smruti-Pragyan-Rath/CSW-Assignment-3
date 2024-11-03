@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#removeButton').click(function() {
+                // Get the ID from the text box
+                const elementId = $('#elementId').val();
+
+                // Remove the element with the matching ID
+                $('#' + elementId).remove();
+
+                // Clear the input field after removing the element
+                $('#elementId').val('');
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Text box and button for ID input -->
+    <label for="elementId">Enter ID to remove:</label>
+    <input type="text" id="elementId">
+    <button id="removeButton">Remove Element</button>
+
+    <!-- Div with paragraphs, each with a unique ID -->
+    <div id="content">
+        <p id="para1">"para1".</p>
+        <p id="para2">"para2".</p>
+        <p id="para3">"para3".</p>
+        <p id="para4">"para4".</p>
+    </div>
+</body>
+</html>

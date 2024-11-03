@@ -1,0 +1,49 @@
+
+
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#b1").click(function(){
+                    $(".body").css('background-color', 'red');
+                });
+                $("#b2").click(function(){
+                    $(".body").css('background-color', 'blue');
+                });
+                $("#b3").click(function(){
+                    $(".body").css('background-color', 'green');
+                });
+                $("#t1").click(function(){
+                    $("#d1").hide();
+                });
+
+            })
+
+        </script>
+        <style>
+            #d1{
+                height: 20px;
+                width: 20px;
+                opacity: 100;
+                background-color: pink;
+                
+            }
+        </style>
+
+    </head>
+    <body class="body">
+        <button id="b1"> RED </button>
+        <button id="b2"> BLUE </button>
+        <button id="b3"> GREEN </button><br>
+
+        <button id="t1">TOGGLE BTN</button>
+
+        <div id="d1">
+
+        </div>
+
+    </body>
+</html>
+

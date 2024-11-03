@@ -1,0 +1,40 @@
+<!-- Write a jQuery program that starts an animation on a <div> element when a 'Start' 
+    button is clicked and stops the animation when a 'Stop' button is clicked. The animation 
+    should increase the width of the <div> from 100px to 400px over 2 seconds. If the 
+    'Stop' button is clicked during the animation, the <div> should immediately stop 
+    resizing at its current width.  -->
+
+    <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+            <script>
+                $(document).ready(function(){
+                $("#b1").click(function(){
+                    $("#d1").animate({width: '400px'}, 2000);
+                });
+                $("#b2").click(function(){
+                    $("#d1").animate({width: '100px'}, 0);
+                });
+               
+
+            })
+
+            </script>
+            <style>
+                #d1{
+                    height: 100px;
+                    width: 100px;
+                    background-color: blue;
+                }
+
+            </style>
+
+        </head>
+        <body>
+            <div id="d1"></div>
+
+            <button id="b1">Start</button>
+            <button id="b2">Stop</button>
+        </body>
+    </html>
